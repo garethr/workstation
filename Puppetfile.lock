@@ -1,0 +1,33 @@
+FORGE
+  remote: http://forge.puppetlabs.com
+  specs:
+    garethr/spotify (0.0.1)
+      puppetlabs/apt (>= 0.0.0)
+    maestrodev/android (1.0.0)
+      maestrodev/wget (~> 0.0.1)
+    maestrodev/wget (0.0.1)
+    puppetlabs/apt (1.1.0)
+      puppetlabs/stdlib (>= 2.2.1)
+    puppetlabs/gcc (0.0.3)
+    puppetlabs/java (0.2.0)
+      puppetlabs/stdlib (>= 0.1.6)
+    puppetlabs/ntp (0.2.0)
+      puppetlabs/stdlib (>= 0.1.6)
+    puppetlabs/stdlib (3.2.0)
+
+GIT
+  remote: git://github.com/garethr/puppet-googlechrome.git
+  ref: master
+  sha: f3df774b8543c31e11232482415c65974abe9b00
+  specs:
+    googlechrome (0.0.1)
+
+DEPENDENCIES
+  garethr/spotify (>= 0)
+  googlechrome (>= 0)
+  maestrodev/android (>= 0)
+  puppetlabs/apt (>= 0)
+  puppetlabs/gcc (>= 0)
+  puppetlabs/java (>= 0)
+  puppetlabs/ntp (>= 0)
+
