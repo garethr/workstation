@@ -14,6 +14,10 @@ package {[
   'golang',
   'python-virtualenv',
   'python-pip',
+  'python-nltk',
+  'python-lxml',
+  'python-svn',
+  'python-scapy',
   'leiningen',
   'clojure1.3',
   'nodejs',
@@ -32,6 +36,8 @@ package {[
   'valgrind',
   'pwgen',
   'nmap',
+  'nikto',
+  'skipfish',
   'strace',
   'tmux',
   'screen',
@@ -45,6 +51,8 @@ package {[
   'telnet',
   'pidgin',
   'libonig-dev',
+  'maven',
+  'apache2-utils',
 ]:
    ensure => 'installed'
 }
@@ -74,6 +82,7 @@ package { [
   'logstash-tail',
   'rackspace-novaclient',
   'lice',
+  'pybloomfiltermmap',
 ]:
   ensure   => 'present',
   provider => 'pip',
