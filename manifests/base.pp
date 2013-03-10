@@ -44,6 +44,8 @@ package {[
   'libreadline-dev',
   'libxml2-dev',
   'libxslt-dev',
+  'libcurl4-openssl-dev',
+  'libsqlite3-dev',
   'zlib1g',
   'zlib1g-dev',
   'pulseaudio-module-raop',
@@ -83,9 +85,17 @@ package { [
   'rackspace-novaclient',
   'lice',
   'pybloomfiltermmap',
+  'BeautifulSoup',
 ]:
   ensure   => 'present',
   provider => 'pip',
+}
+
+package { [
+  'gauntlt',
+]:
+  ensure => installed,
+  provider => gem,
 }
 
 include 'android'
