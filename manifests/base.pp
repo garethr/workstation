@@ -1,6 +1,6 @@
 Exec { path => '/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin' }
 
-package {[
+ensure_packages([
   'zsh',
   'vim-nox',
   'curl',
@@ -11,7 +11,6 @@ package {[
   'htop',
   'ruby1.9.1',
   'ruby1.9.1-dev',
-  'golang',
   'python-virtualenv',
   'python-pip',
   'python-nltk',
@@ -23,8 +22,6 @@ package {[
   'nodejs',
   'nodejs-dev',
   'npm',
-  'scala',
-  'erlang',
   'phantomjs',
   'less',
   'tar',
@@ -55,9 +52,15 @@ package {[
   'libonig-dev',
   'maven',
   'apache2-utils',
-]:
-   ensure => 'installed'
-}
+  'redir',
+  'lxc',
+  'mercurial',
+  'openvpn',
+  'network-manager-openvpn',
+  'graphviz',
+  'libpcre3-dev',
+  'libssl-dev',
+])
 
 file { '/usr/bin/ack':
   ensure  => 'link',
@@ -70,6 +73,11 @@ include 'gcc'
 class { 'java': }
 
 class { 'googlechrome': }
+
+include 'golang'
+include 'elixir'
+include 'erlang'
+include 'scala'
 
 class { 'ntp':
   autoupdate => true
@@ -93,6 +101,8 @@ package { [
 
 package { [
   'gauntlt',
+  'dashing',
+  'methadone',
 ]:
   ensure => installed,
   provider => gem,

@@ -1,19 +1,29 @@
 FORGE
   remote: http://forge.puppetlabs.com
   specs:
+    garethr/elixir (0.0.2)
+      garethr/erlang (>= 0.0.0)
+      maestrodev/wget (>= 0.0.0)
+      puppetlabs/stdlib (>= 0.0.0)
+    garethr/erlang (0.0.3)
+      puppetlabs/apt (>= 0.0.0)
+      puppetlabs/stdlib (>= 0.0.0)
+    garethr/scala (0.1.1)
+      maestrodev/wget (>= 0.0.0)
+      puppetlabs/stdlib (>= 0.0.0)
     garethr/spotify (0.0.1)
       puppetlabs/apt (>= 0.0.0)
-    maestrodev/android (1.0.0)
-      maestrodev/wget (~> 0.0.1)
-    maestrodev/wget (0.0.1)
-    puppetlabs/apt (1.1.0)
+    maestrodev/android (1.1.0)
+      maestrodev/wget (>= 1.0.0)
+    maestrodev/wget (1.2.0)
+    puppetlabs/apt (1.2.0)
       puppetlabs/stdlib (>= 2.2.1)
     puppetlabs/gcc (0.0.3)
-    puppetlabs/java (0.2.0)
+    puppetlabs/java (0.3.0)
       puppetlabs/stdlib (>= 0.1.6)
-    puppetlabs/ntp (0.2.0)
+    puppetlabs/ntp (1.0.1)
       puppetlabs/stdlib (>= 0.1.6)
-    puppetlabs/stdlib (3.2.0)
+    puppetlabs/stdlib (4.1.0)
 
 GIT
   remote: git://github.com/garethr/puppet-googlechrome.git
@@ -23,6 +33,9 @@ GIT
     googlechrome (0.0.1)
 
 DEPENDENCIES
+  garethr/elixir (>= 0)
+  garethr/erlang (>= 0)
+  garethr/scala (>= 0)
   garethr/spotify (>= 0)
   googlechrome (>= 0)
   maestrodev/android (>= 0)
