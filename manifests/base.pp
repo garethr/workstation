@@ -19,9 +19,6 @@ ensure_packages([
   'python-scapy',
   'leiningen',
   'clojure1.3',
-  'nodejs',
-  'nodejs-dev',
-  'npm',
   'phantomjs',
   'less',
   'tar',
@@ -78,6 +75,7 @@ include 'golang'
 include 'elixir'
 include 'erlang'
 include 'scala'
+include 'nodejs'
 
 class { 'ntp':
   autoupdate => true
@@ -94,6 +92,7 @@ package { [
   'lice',
   'pybloomfiltermmap',
   'BeautifulSoup',
+  'autoenv',
 ]:
   ensure   => 'present',
   provider => 'pip',

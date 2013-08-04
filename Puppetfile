@@ -13,3 +13,5 @@ mod "garethr/elixir"
 mod "maestrodev/android"
 
 mod "googlechrome", :git => "git://github.com/garethr/puppet-googlechrome.git"
+
+mod "willdurand/nodejs"
