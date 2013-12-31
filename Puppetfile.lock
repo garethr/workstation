@@ -1,6 +1,9 @@
 FORGE
   remote: http://forge.puppetlabs.com
   specs:
+    garethr/docker (0.7.0)
+      puppetlabs/apt (>= 1.1.0)
+      puppetlabs/stdlib (>= 4.1.0)
     garethr/elixir (0.0.2)
       garethr/erlang (>= 0.0.0)
       maestrodev/wget (>= 0.0.0)
@@ -8,6 +11,9 @@ FORGE
     garethr/erlang (0.0.3)
       puppetlabs/apt (>= 0.0.0)
       puppetlabs/stdlib (>= 0.0.0)
+    garethr/golang (0.0.4)
+      puppetlabs/apt (>= 1.1.0)
+      puppetlabs/stdlib (>= 3.2.0)
     garethr/scala (0.1.2)
       maestrodev/wget (>= 0.0.0)
       puppetlabs/stdlib (>= 0.0.0)
@@ -16,7 +22,7 @@ FORGE
     maestrodev/android (1.1.0)
       maestrodev/wget (>= 1.0.0)
     maestrodev/wget (1.2.0)
-    puppetlabs/apt (1.2.0)
+    puppetlabs/apt (1.4.0)
       puppetlabs/stdlib (>= 2.2.1)
     puppetlabs/gcc (0.0.3)
     puppetlabs/java (0.3.0)
@@ -33,13 +39,23 @@ GIT
   specs:
     googlechrome (0.0.1)
 
+GIT
+  remote: git@github.com:drogerschariot/puppet-oracle-java.git
+  ref: master
+  sha: b3a56e7bfc332eab12d6e5557eb40243ca88146d
+  specs:
+    oracle_java (0.0.1)
+
 DEPENDENCIES
+  garethr/docker (>= 0)
   garethr/elixir (>= 0)
   garethr/erlang (>= 0)
+  garethr/golang (>= 0)
   garethr/scala (>= 0)
   garethr/spotify (>= 0)
   googlechrome (>= 0)
   maestrodev/android (>= 0)
+  oracle_java (>= 0)
   puppetlabs/apt (>= 0)
   puppetlabs/gcc (>= 0)
   puppetlabs/java (>= 0)

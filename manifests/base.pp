@@ -69,6 +69,10 @@ include 'gcc'
 
 class { 'java': }
 
+class { 'oracle_java':
+  version => '7u40',
+}
+
 class { 'googlechrome': }
 
 include 'golang'
@@ -76,6 +80,12 @@ include 'elixir'
 include 'erlang'
 include 'scala'
 include 'nodejs'
+
+class { 'docker':
+  version => '0.7.0',
+}
+
+docker::image { 'ubuntu': }
 
 class { 'ntp':
   autoupdate => true
@@ -93,6 +103,10 @@ package { [
   'pybloomfiltermmap',
   'BeautifulSoup',
   'autoenv',
+  'ansible',
+  'ansible-shell',
+  'asciinema',
+  'wercker'
 ]:
   ensure   => 'present',
   provider => 'pip',
@@ -103,7 +117,7 @@ package { [
   'dashing',
   'methadone',
 ]:
-  ensure => installed,
+  ensure   => installed,
   provider => gem,
 }
 
